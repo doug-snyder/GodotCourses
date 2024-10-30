@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyd8dwtr4etha"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ey8m"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ml5re"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.61651, 0, 0, 0, 0.36291, 0, 0, 0, 0.44922, -0.0134835, 1.18114, 0)
+mesh = SubResource("BoxMesh_7ey8m")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.90827, 0, 0, 0, 1.90827, 0, 0, 0, 1.90827, 0, 0, 0)
+mesh = SubResource("SphereMesh_ml5re")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.41871, 0, 0, 0, 1.41871, 0, 0, 0, 1.41871, 0, 1.09048, 0)
+mesh = SubResource("SphereMesh_ml5re")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03619, 0)
+mesh = SubResource("SphereMesh_ml5re")
