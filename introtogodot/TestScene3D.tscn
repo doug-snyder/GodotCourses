@@ -1,23 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyd8dwtr4etha"]
+[gd_scene load_steps=4 format=3 uid="uid://cyd8dwtr4etha"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_7ey8m"]
+[ext_resource type="Material" uid="uid://dxyo1oyx428dn" path="res://Materials/TestMaterial.tres" id="1_vhib4"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_ml5re"]
+[sub_resource type="SphereMesh" id="SphereMesh_vnke2"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_s66m7"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.61651, 0, 0, 0, 0.36291, 0, 0, 0, 0.44922, -0.0134835, 1.18114, 0)
-mesh = SubResource("BoxMesh_7ey8m")
+material_override = ExtResource("1_vhib4")
+mesh = SubResource("SphereMesh_vnke2")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.90827, 0, 0, 0, 1.90827, 0, 0, 0, 1.90827, 0, 0, 0)
-mesh = SubResource("SphereMesh_ml5re")
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.241601, 0.878598, 0.41194, 0.705145, -0.450596, 0.54748, 0.666633, 0.158205, -0.728404, 1.01239, 2.10846, -4.37343)
+shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97928, 3.48234)
+light_color = Color(1, 0.12549, 0.0666667, 1)
+light_energy = 5.202
+shadow_enabled = true
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.41871, 0, 0, 0, 1.41871, 0, 0, 0, 1.41871, 0, 1.09048, 0)
-mesh = SubResource("SphereMesh_ml5re")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.03619, 0)
-mesh = SubResource("SphereMesh_ml5re")
+transform = Transform3D(5.39783, 0, 0, 0, 5.39783, 0, 0, 0, 5.39783, -9.46522e-05, -0.5004, -0.00557029)
+mesh = SubResource("PlaneMesh_s66m7")
