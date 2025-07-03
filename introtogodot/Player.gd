@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var move_speed : float = 200.0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	velocity.x = 0
 	velocity.y = 0
 
